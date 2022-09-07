@@ -1,0 +1,25 @@
+template:
+  name: RemotePipe1
+  identifier: RemotePipe1
+  versionLabel: v1
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: as
+          identifier: as
+          template:
+            templateRef: account.StageY
+            versionLabel: v3
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: de
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
