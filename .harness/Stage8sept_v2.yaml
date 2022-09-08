@@ -1,0 +1,22 @@
+template:
+  name: Stage8sept
+  identifier: Stage8sept
+  versionLabel: v2
+  type: Stage
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: using
+              identifier: using
+              template:
+                templateRef: account.Step8sept
+                versionLabel: v1
+                templateInputs:
+                  type: HarnessApproval
+                  spec:
+                    approvers:
+                      userGroups: <+input>
