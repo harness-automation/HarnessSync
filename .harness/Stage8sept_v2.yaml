@@ -20,3 +20,16 @@ template:
                   spec:
                     approvers:
                       userGroups: <+input>
+          - step:
+              type: HarnessApproval
+              name: D4
+              identifier: D4
+              spec:
+                approvalMessage: Please review the following information and approve the pipeline progression
+                includePipelineExecutionHistory: true
+                approvers:
+                  userGroups: <+input>
+                  minimumCount: 1
+                  disallowPipelineExecutor: false
+                approverInputs: []
+              timeout: 1d
