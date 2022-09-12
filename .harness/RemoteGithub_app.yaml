@@ -8,7 +8,7 @@ pipeline:
     - stage:
         name: A2
         identifier: A2
-        description: ddff
+        description: ddff345
         type: Approval
         spec:
           execution:
