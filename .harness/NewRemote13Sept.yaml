@@ -21,7 +21,7 @@ pipeline:
                   spec:
                     approvalMessage: |-
                       Please review the following information
-                      and approve the pipeline progression
+                      and approve the pipeline progression 321
                     includePipelineExecutionHistory: true
                     approvers:
                       minimumCount: 1
@@ -29,3 +29,6 @@ pipeline:
                       userGroups: <+input>
                     approverInputs: []
         tags: {}
+  connectorRef: account.github_app_token
+  storeType: REMOTE
+  filePath: .harness/NewRemote13Sept.yaml
