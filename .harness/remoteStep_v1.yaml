@@ -11,7 +11,8 @@ template:
       approvalMessage: Please review the following information and approve the pipeline progression
       includePipelineExecutionHistory: true
       approvers:
-        userGroups: <+input>
+        userGroups:
+          - account.PLQE
         minimumCount: 1
         disallowPipelineExecutor: false
       approverInputs: []
