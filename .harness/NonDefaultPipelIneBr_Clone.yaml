@@ -1,0 +1,26 @@
+---
+pipeline:
+  template:
+    templateRef: "org.RemotePipeTemplate"
+    versionLabel: "v1"
+    templateInputs:
+      stages:
+      - stage:
+          identifier: "acxc"
+          template:
+            templateInputs:
+              type: "Approval"
+              spec:
+                execution:
+                  steps:
+                  - step:
+                      identifier: "A21"
+                      type: "HarnessApproval"
+                      spec:
+                        approvers:
+                          userGroups: "<+input>"
+  tags: {}
+  projectIdentifier: "AmitTest"
+  orgIdentifier: "default"
+  identifier: "NonDefaultPipelIneBr_Clone"
+  name: "NonDefaultPipelIneBr - Clone"
