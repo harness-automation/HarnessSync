@@ -14,7 +14,7 @@ pipeline:
           execution:
             steps:
               - step:
-                  name: asw
+                  name: asw345
                   identifier: asw
                   template:
                     templateRef: StepProd1
