@@ -1,6 +1,7 @@
 inputSet:
   identifier: "a23"
-  name: "a23"
+  name: "a232"
+  tags: {}
   orgIdentifier: "default"
   projectIdentifier: "AmitTest"
   pipeline:
