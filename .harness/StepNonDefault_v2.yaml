@@ -12,7 +12,7 @@ template:
       source:
         type: Inline
         spec:
-          script: dcxvvv update
+          script: dcxvvv update rtyy
       environmentVariables: []
       outputVariables: []
   versionLabel: v2
