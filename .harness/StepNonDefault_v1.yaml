@@ -13,6 +13,6 @@ template:
       source:
         type: Inline
         spec:
-          script: dcxvvv
+          script: dcxvvv update
       environmentVariables: []
       outputVariables: []
