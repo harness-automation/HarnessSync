@@ -1,0 +1,17 @@
+template:
+  name: stage1
+  identifier: stage1
+  versionLabel: v1
+  type: Stage
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: a23
+              identifier: a23
+              template:
+                templateRef: account.Step1
+                versionLabel: v1
