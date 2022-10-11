@@ -10,8 +10,16 @@ template:
       execution:
         steps:
           - step:
-              name: a23
-              identifier: a23
-              template:
-                templateRef: account.Step1
-                versionLabel: v1
+              type: ShellScript
+              name: s1
+              identifier: s1
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
