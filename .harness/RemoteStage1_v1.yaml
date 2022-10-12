@@ -22,3 +22,16 @@ template:
                       type: Inline
                       spec:
                         script: <+input>
+          - step:
+              name: a3
+              identifier: a3
+              template:
+                templateRef: account.RemoteStep1
+                versionLabel: v1
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
