@@ -8,7 +8,7 @@ pipeline:
     - stage:
         name: A23
         identifier: A23
-        description: ""
+        description: "hello update"
         type: Custom
         spec:
           execution:
