@@ -35,3 +35,9 @@ template:
                       type: Inline
                       spec:
                         script: <+input>
+          - step:
+              name: wer
+              identifier: wer
+              template:
+                templateRef: account.AmitStep4Oct123
+                versionLabel: v1
