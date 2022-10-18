@@ -36,7 +36,7 @@ template:
                       spec:
                         script: <+input>
           - step:
-              name: wer
+              name: werw
               identifier: wer
               template:
                 templateRef: account.AmitStep4Oct123
