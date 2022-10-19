@@ -1,18 +1,17 @@
 template:
-  name: remoteStep
-  identifier: remoteStep
-  versionLabel: v1
+  name: Template1Account
+  identifier: Template1Account
   type: Step
   tags: {}
   spec:
     type: HarnessApproval
     timeout: 1d
     spec:
-      approvalMessage: Please review the following information and approve the pipeline progression
+      approvalMessage: Please review the following information and approve the pipeline progression update
       includePipelineExecutionHistory: true
       approvers:
-       userGroups:
-          - account.PLQE
+        userGroups: <+input>
         minimumCount: 1
         disallowPipelineExecutor: false
       approverInputs: []
+  versionLabel: v2

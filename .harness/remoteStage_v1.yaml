@@ -1,0 +1,22 @@
+template:
+  name: remoteStage
+  identifier: remoteStage
+  versionLabel: v1
+  type: Stage
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: sasw
+              identifier: sasw
+              template:
+                templateRef: account.remoteStep
+                versionLabel: v1
+                templateInputs:
+                  type: HarnessApproval
+                  spec:
+                    approvers:
+                      userGroups: <+input>

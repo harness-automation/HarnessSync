@@ -1,8 +1,10 @@
 template:
-  name: remoteStep
-  identifier: remoteStep
+  name: Qstep
+  identifier: Qstep
   versionLabel: v1
   type: Step
+  projectIdentifier: imranTest
+  orgIdentifier: default
   tags: {}
   spec:
     type: HarnessApproval
@@ -11,7 +13,7 @@ template:
       approvalMessage: Please review the following information and approve the pipeline progression
       includePipelineExecutionHistory: true
       approvers:
-       userGroups:
+        userGroups:
           - account.PLQE
         minimumCount: 1
         disallowPipelineExecutor: false

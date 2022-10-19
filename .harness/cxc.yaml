@@ -1,6 +1,6 @@
 template:
-  name: remoteStep
-  identifier: remoteStep
+  name: abcd
+  identifier: abcd
   versionLabel: v1
   type: Step
   tags: {}
@@ -11,8 +11,7 @@ template:
       approvalMessage: Please review the following information and approve the pipeline progression
       includePipelineExecutionHistory: true
       approvers:
-       userGroups:
-          - account.PLQE
+        userGroups: <+input>
         minimumCount: 1
         disallowPipelineExecutor: false
       approverInputs: []

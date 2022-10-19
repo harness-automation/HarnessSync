@@ -1,8 +1,10 @@
 template:
-  name: remoteStep
-  identifier: remoteStep
+  name: Step123
+  identifier: Step123
   versionLabel: v1
   type: Step
+  projectIdentifier: GitXTemplateDemo
+  orgIdentifier: default
   tags: {}
   spec:
     type: HarnessApproval
@@ -11,8 +13,7 @@ template:
       approvalMessage: Please review the following information and approve the pipeline progression
       includePipelineExecutionHistory: true
       approvers:
-       userGroups:
-          - account.PLQE
+        userGroups: <+input>
         minimumCount: 1
         disallowPipelineExecutor: false
       approverInputs: []

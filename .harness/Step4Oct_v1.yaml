@@ -1,6 +1,6 @@
 template:
-  name: remoteStep
-  identifier: remoteStep
+  name: Step4Oct
+  identifier: Step4Oct
   versionLabel: v1
   type: Step
   tags: {}
@@ -11,8 +11,8 @@ template:
       approvalMessage: Please review the following information and approve the pipeline progression
       includePipelineExecutionHistory: true
       approvers:
-       userGroups:
-          - account.PLQE
+        userGroups:
+          - account._account_all_users
         minimumCount: 1
         disallowPipelineExecutor: false
       approverInputs: []

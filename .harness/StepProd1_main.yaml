@@ -1,8 +1,9 @@
 template:
-  name: remoteStep
-  identifier: remoteStep
-  versionLabel: v1
+  name: StepProd1
+  identifier: StepProd1
   type: Step
+  projectIdentifier: SimplifiedGitSync_Do_Not_Delete
+  orgIdentifier: Simlified_Git_sync
   tags: {}
   spec:
     type: HarnessApproval
@@ -11,8 +12,8 @@ template:
       approvalMessage: Please review the following information and approve the pipeline progression
       includePipelineExecutionHistory: true
       approvers:
-       userGroups:
-          - account.PLQE
+        userGroups: <+input>
         minimumCount: 1
         disallowPipelineExecutor: false
       approverInputs: []
+  versionLabel: main
