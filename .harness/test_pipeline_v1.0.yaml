@@ -1,0 +1,40 @@
+template:
+  name: test pipeline
+  identifier: test_pipeline
+  versionLabel: v1.0
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: Aw3
+          identifier: Aw3
+          template:
+            templateRef: account.Deploy_SecretStore
+            versionLabel: v1.0
+            templateInputs:
+              type: Deployment
+              spec:
+                serviceConfig:
+                  serviceRef: <+input>
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      manifests:
+                        - manifest:
+                            identifier: acc1
+                            type: HelmChart
+                            spec:
+                              store:
+                                type: Http
+                                spec:
+                                  connectorRef: <+input>
+                              chartName: <+input>
+                              chartVersion: <+input>
+                infrastructure:
+                  environmentRef: <+input>
+                  infrastructureDefinition:
+                    type: KubernetesDirect
+                    spec:
+                      connectorRef: <+input>
+                      namespace: <+input>
