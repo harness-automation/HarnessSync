@@ -6,35 +6,86 @@ template:
   tags: {}
   spec:
     stages:
-      - stage:
-          name: Aw3
-          identifier: Aw3
-          template:
-            templateRef: account.Deploy_SecretStore
-            versionLabel: v1.0
-            templateInputs:
-              type: Deployment
-              spec:
-                serviceConfig:
-                  serviceRef: <+input>
-                  serviceDefinition:
-                    type: Kubernetes
-                    spec:
-                      manifests:
-                        - manifest:
-                            identifier: acc1
-                            type: HelmChart
-                            spec:
-                              store:
-                                type: Http
+      - parallel:
+          - stage:
+              name: Aw3
+              identifier: Aw3
+              template:
+                templateRef: account.Deploy_SecretStore
+                versionLabel: v1.0
+                templateInputs:
+                  type: Deployment
+                  spec:
+                    serviceConfig:
+                      serviceRef: <+input>
+                      serviceDefinition:
+                        type: Kubernetes
+                        spec:
+                          manifests:
+                            - manifest:
+                                identifier: acc1
+                                type: HelmChart
                                 spec:
-                                  connectorRef: <+input>
-                              chartName: <+input>
-                              chartVersion: <+input>
-                infrastructure:
-                  environmentRef: <+input>
-                  infrastructureDefinition:
-                    type: KubernetesDirect
-                    spec:
-                      connectorRef: <+input>
-                      namespace: <+input>
+                                  store:
+                                    type: Http
+                                    spec:
+                                      connectorRef: <+input>
+                                  chartName: <+input>
+                                  chartVersion: <+input>
+                    infrastructure:
+                      environmentRef: <+input>
+                      infrastructureDefinition:
+                        type: KubernetesDirect
+                        spec:
+                          connectorRef: <+input>
+                          namespace: <+input>
+          - stage:
+              name: Aw4
+              identifier: Aw4
+              template:
+                templateRef: account.Deploy_External_Secret
+                versionLabel: v1.0
+                templateInputs:
+                  type: Deployment
+                  spec:
+                    serviceConfig:
+                      serviceRef: <+input>
+                    infrastructure:
+                      environmentRef: <+input>
+                      infrastructureDefinition:
+                        type: KubernetesDirect
+                        spec:
+                          connectorRef: <+input>
+                          namespace: <+input>
+          - stage:
+              name: Aw5
+              identifier: Aw5
+              template:
+                templateRef: account.Deploy_SecretStore
+                versionLabel: v1.0
+                templateInputs:
+                  type: Deployment
+                  spec:
+                    serviceConfig:
+                      serviceRef: <+input>
+                      serviceDefinition:
+                        type: Kubernetes
+                        spec:
+                          manifests:
+                            - manifest:
+                                identifier: acc1
+                                type: HelmChart
+                                spec:
+                                  store:
+                                    type: Http
+                                    spec:
+                                      connectorRef: <+input>
+                                  chartName: <+input>
+                                  chartVersion: <+input>
+                    infrastructure:
+                      environmentRef: <+input>
+                      infrastructureDefinition:
+                        type: KubernetesDirect
+                        spec:
+                          connectorRef: <+input>
+                          namespace: <+input>
