@@ -1,0 +1,30 @@
+pipeline:
+  name: pipe7nov2
+  identifier: pipe7nov2
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: A3
+        identifier: A3
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: A4
+                  identifier: A4
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: hello
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
