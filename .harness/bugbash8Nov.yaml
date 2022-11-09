@@ -1,0 +1,24 @@
+pipeline:
+  name: bugbash8Nov
+  identifier: bugbash8Nov
+  projectIdentifier: AmitTest
+  orgIdentifier: GitXOrg
+  tags: {}
+  stages:
+    - stage:
+        name: A2
+        identifier: A2
+        template:
+          templateRef: StageRemote
+          versionLabel: "1"
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: A3
+                      template:
+                        templateInputs:
+                          type: ShellScript
+                          timeout: <+input>
