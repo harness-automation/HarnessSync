@@ -17,6 +17,12 @@ pipeline:
             execution:
               steps:
               - step:
+                  identifier: "A3"
+                  template:
+                    templateInputs:
+                      type: "ShellScript"
+                      timeout: "<+input>"
+              - step:
                   identifier: "A34"
                   type: "ShellScript"
                   spec:
