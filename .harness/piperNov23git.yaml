@@ -8,7 +8,7 @@ pipeline:
     - stage:
         name: A3345
         identifier: A3345
-        description: ""
+        description: "fghhh"
         type: Custom
         spec:
           execution:
