@@ -1,0 +1,24 @@
+template:
+  name: Stage25Nov
+  identifier: Stage25Nov
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: SimplifiedGitSync_Do_Not_Delete
+  orgIdentifier: Simlified_Git_sync
+  tags: {}
+  spec:
+    type: Approval
+    spec:
+      execution:
+        steps:
+          - step:
+              name: df4
+              identifier: df4
+              template:
+                templateRef: step24Nov
+                versionLabel: v1
+                templateInputs:
+                  type: HarnessApproval
+                  spec:
+                    approvers:
+                      userGroups: <+input>
