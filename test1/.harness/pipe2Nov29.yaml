@@ -68,3 +68,26 @@ pipeline:
                   type: KubernetesDirect
                   spec:
                     namespace: <+input>
+    - stage:
+        name: fg
+        identifier: fg
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: tgh
+                  identifier: tgh
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
