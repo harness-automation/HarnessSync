@@ -40,3 +40,19 @@ pipeline:
             template:
               templateRef: StageDeploy12Dec
               versionLabel: "1"
+    - stage:
+        name: stage3
+        identifier: stage3
+        template:
+          templateRef: DeolyStage14Dec
+          versionLabel: v1
+          templateInputs:
+            type: Deployment
+            spec:
+              infrastructure:
+                infrastructureDefinition:
+                  type: KubernetesGcp
+                  spec:
+                    connectorRef: <+input>
+                    cluster: <+input>
+                    namespace: <+input>
