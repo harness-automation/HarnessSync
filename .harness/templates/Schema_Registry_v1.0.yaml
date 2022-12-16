@@ -10,7 +10,7 @@ template:
     type: Deployment
     spec:
       serviceConfig:
-        serviceRef: Schema_Registry
+        serviceRef: QA
         serviceDefinition:
           spec:
             variables: []
