@@ -131,19 +131,65 @@ pipeline:
                       spec:
                         connectorRef: <+input>
                         namespace: <+input>
-    - stage:
-        name: stage9
-        identifier: stage9
-        template:
-          templateRef: DeolyStage14Dec
-          versionLabel: v1
-          templateInputs:
-            type: Deployment
-            spec:
-              infrastructure:
-                infrastructureDefinition:
-                  type: KubernetesGcp
-                  spec:
-                    connectorRef: <+input>
-                    cluster: <+input>
-                    namespace: <+input>
+    - parallel:
+        - stage:
+            name: stage9
+            identifier: stage9
+            template:
+              templateRef: DeolyStage14Dec
+              versionLabel: v1
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesGcp
+                      spec:
+                        connectorRef: <+input>
+                        cluster: <+input>
+                        namespace: <+input>
+        - stage:
+            name: stage10
+            identifier: stage10
+            template:
+              templateRef: Stage7Caching
+              versionLabel: "1"
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: <+input>
+                        namespace: <+input>
+        - stage:
+            name: stage11
+            identifier: stage11
+            template:
+              templateRef: Stage8Caching
+              versionLabel: "1"
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: <+input>
+                        namespace: <+input>
+        - stage:
+            name: stage12
+            identifier: stage12
+            template:
+              templateRef: Stage8Caching
+              versionLabel: "1"
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: <+input>
+                        namespace: <+input>
