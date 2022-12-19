@@ -1,0 +1,83 @@
+pipeline:
+  name: PIpeline cache 19Dec
+  identifier: PIpeline_cache_19Dec
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - parallel:
+        - stage:
+            name: stage1
+            identifier: stage1
+            template:
+              templateRef: Stage1Caching
+              versionLabel: "1"
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: <+input>
+                        namespace: <+input>
+        - stage:
+            name: stage2
+            identifier: stage2
+            template:
+              templateRef: Stage2Caching
+              versionLabel: "1"
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: <+input>
+                        namespace: <+input>
+        - stage:
+            name: stage3
+            identifier: stage3
+            template:
+              templateRef: Stage3Caching
+              versionLabel: "1"
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: <+input>
+                        namespace: <+input>
+        - stage:
+            name: stage4
+            identifier: stage4
+            template:
+              templateRef: Stage4Caching
+              versionLabel: "1"
+              templateInputs:
+                type: Deployment
+                spec:
+                  infrastructure:
+                    infrastructureDefinition:
+                      type: KubernetesDirect
+                      spec:
+                        connectorRef: <+input>
+                        namespace: <+input>
+    - stage:
+        name: stage5
+        identifier: stage5
+        template:
+          templateRef: Stage5Caching
+          versionLabel: "1"
+          templateInputs:
+            type: Deployment
+            spec:
+              infrastructure:
+                infrastructureDefinition:
+                  type: KubernetesDirect
+                  spec:
+                    connectorRef: <+input>
+                    namespace: <+input>
