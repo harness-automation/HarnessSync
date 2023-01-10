@@ -1,0 +1,17 @@
+template:
+  name: template10Jan
+  identifier: template10Jan
+  versionLabel: "1"
+  type: Step
+  projectIdentifier: TestMigration04Jan
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Http
+    timeout: 10s
+    spec:
+      url: <+input>
+      method: GET
+      headers: []
+      outputVariables: []
+      requestBody: <+input>
