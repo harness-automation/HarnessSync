@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: A2
+        name: A23
         identifier: A2
         description: "fdgfdg"
         type: Custom
