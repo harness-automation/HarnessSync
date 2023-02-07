@@ -15,7 +15,7 @@ pipeline:
           service:
             serviceRef: S2
           environment:
-            environmentRef: <+input>
+            environmentRef: qa
             deployToAll: false
             environmentInputs: <+input>
             serviceOverrideInputs: <+input>
