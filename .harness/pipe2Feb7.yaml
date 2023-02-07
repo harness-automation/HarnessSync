@@ -24,7 +24,7 @@ pipeline:
                       type: Inline
                       spec:
                         script: |-
-                          echo 'hi'
+                          echo 'hi non default'
                           exit 1
                     environmentVariables: []
                     outputVariables: []
