@@ -1,5 +1,6 @@
 inputSet:
   name: set1Feb8
+  tags: {}
   identifier: set1Feb8
   orgIdentifier: default
   projectIdentifier: AmitTest
@@ -12,4 +13,11 @@ inputSet:
           spec:
             environment:
               environmentRef: qa
-              infrastructureDefinitions: []
+              infrastructureDefinitions:
+                - identifier: abc
+                  inputs:
+                    identifier: abc
+                    type: KubernetesDirect
+                    spec:
+                      connectorRef: account.k8s_acc_con
+                      namespace: rde
