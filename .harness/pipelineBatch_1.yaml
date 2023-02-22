@@ -1,0 +1,14 @@
+template:
+  name: pipelineBatch
+  identifier: pipelineBatch
+  versionLabel: "1"
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S1
+          identifier: S1
+          template:
+            templateRef: account.stageBatch1
+            versionLabel: "1"
