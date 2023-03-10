@@ -1,5 +1,5 @@
 pipeline:
-  name: pipe 1 march19
+  name: pipe_1_march10
   identifier: pipe_1_march10
   projectIdentifier: TestAmit
   orgIdentifier: Simlified_Git_sync
