@@ -17,7 +17,7 @@ pipeline:
             steps:
               - step:
                   type: ShellScript
-                  name: ShellScript_1
+                  name: ShellScript_112
                   identifier: ShellScript_1
                   spec:
                     shell: Bash
@@ -25,7 +25,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo 'hi main'
+                        script: echo 'hi new branch'
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
