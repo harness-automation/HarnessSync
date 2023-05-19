@@ -3,7 +3,8 @@ pipeline:
   identifier: check_tag
   projectIdentifier: AmitTest
   orgIdentifier: default
-  tags: {}
+  tags:
+    tag123: ""
   stages:
     - stage:
         name: S123
