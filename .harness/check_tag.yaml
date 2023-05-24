@@ -7,7 +7,7 @@ pipeline:
     tag123566: ""
   stages:
     - stage:
-        name: S123
+        name: S123333
         identifier: S123
         description: ""
         type: Custom
