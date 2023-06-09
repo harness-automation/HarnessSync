@@ -8,23 +8,19 @@ pipeline:
     - stage:
         name: St1
         identifier: St1
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  timeout: 10m
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
+        template:
+          templateRef: stest123
+          versionLabel: "1"
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
                       spec:
-                        script: <+input>
-                    environmentVariables: []
-                    outputVariables: []
-        tags: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
