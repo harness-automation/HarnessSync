@@ -1,0 +1,17 @@
+template:
+  name: pl_auto_template_zlY8e
+  identifier: pl_auto_template_zlY8e
+  versionLabel: v3
+  type: Stage
+  tags: { }
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: pl_auto_template_IGJfZ
+              identifier: pl_auto_template_IGJfZ
+              template:
+                templateRef: account.pl_auto_template_IGJfZ
+                versionLabel: v3
