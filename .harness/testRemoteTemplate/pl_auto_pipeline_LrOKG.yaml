@@ -1,0 +1,14 @@
+template:
+  name: pl_auto_pipeline_LrOKG
+  identifier: pl_auto_pipeline_LrOKG
+  versionLabel: v3
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: pl_auto_template_Ao9V5
+          identifier: pl_auto_template_Ao9V5
+          template:
+            templateRef: account.pl_auto_template_Ao9V5
+            versionLabel: v3
