@@ -15,6 +15,7 @@ pipeline:
             steps:
               - step:
                   type: Wait
+                  type: Wait
                   name: Wait_1
                   identifier: Wait_1
                   spec:
