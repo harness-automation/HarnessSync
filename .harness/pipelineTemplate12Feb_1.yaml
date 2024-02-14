@@ -52,3 +52,4 @@ template:
                             type: Inline
                             spec:
                               script: <+input>
+    allowStageExecutions: true
