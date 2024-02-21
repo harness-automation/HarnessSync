@@ -42,7 +42,7 @@ pipeline:
               pipeline: testChild_123_21feb
               project: TestAmit
               inputSetReferences:
-                - test_input_set_non_default
+                - set321_21feb
             tags: {}
         - stage:
             name: s3
