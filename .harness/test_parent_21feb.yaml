@@ -5,14 +5,26 @@ pipeline:
   orgIdentifier: Pipelines_NonK8s_Org_NG
   tags: {}
   stages:
-    - stage:
-        name: s1
-        identifier: s1
-        description: ""
-        type: Pipeline
-        spec:
-          org: Pipelines_NonK8s_Org_NG
-          pipeline: trestChild_21feb
-          project: DoNotDelete_AmitSingh
-          inputSetReferences:
-            - set123feb21
+    - parallel:
+        - stage:
+            name: s1
+            identifier: s1
+            description: ""
+            type: Pipeline
+            spec:
+              org: Pipelines_NonK8s_Org_NG
+              pipeline: trestChild_21feb
+              project: DoNotDelete_AmitSingh
+              inputSetReferences:
+                - set123feb21
+        - stage:
+            name: ss
+            identifier: ss
+            description: ""
+            type: Pipeline
+            spec:
+              org: default
+              pipeline: testChild_123_21feb
+              project: TestAmit
+              inputSetReferences:
+                - set321_21feb
