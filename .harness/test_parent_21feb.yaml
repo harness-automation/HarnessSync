@@ -41,21 +41,7 @@ pipeline:
               org: default
               pipeline: testChild_123_21feb
               project: TestAmit
-              inputs:
-                identifier: testChild_123_21feb
-                stages:
-                  - stage:
-                      identifier: s1
-                      type: Custom
-                      spec:
-                        execution:
-                          steps:
-                            - step:
-                                identifier: ShellScript_1
-                                type: ShellScript
-                                spec:
-                                  source:
-                                    type: Inline
-                                    spec:
-                                      script: echo 'hi'
+              inputSetReferences:
+                - test_input_set_non_default
+            tags: {}
   allowStageExecutions: true
