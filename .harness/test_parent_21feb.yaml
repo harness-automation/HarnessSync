@@ -31,7 +31,7 @@ pipeline:
                                   source:
                                     type: Inline
                                     spec:
-                                      script: echo 'hi'
+                                      script: echo 'hi stage1'
         - stage:
             name: ss
             identifier: ss
