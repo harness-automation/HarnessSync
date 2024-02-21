@@ -1,0 +1,18 @@
+pipeline:
+  name: test parent 21feb
+  identifier: test_parent_21feb
+  projectIdentifier: DoNotDelete_AmitSingh
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Pipeline
+        spec:
+          org: Pipelines_NonK8s_Org_NG
+          pipeline: trestChild_21feb
+          project: DoNotDelete_AmitSingh
+          inputSetReferences:
+            - set123feb21
