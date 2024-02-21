@@ -15,8 +15,23 @@ pipeline:
               org: Pipelines_NonK8s_Org_NG
               pipeline: trestChild_21feb
               project: DoNotDelete_AmitSingh
-              inputSetReferences:
-                - set123feb21
+              inputs:
+                identifier: trestChild_21feb
+                stages:
+                  - stage:
+                      identifier: s1
+                      type: Custom
+                      spec:
+                        execution:
+                          steps:
+                            - step:
+                                identifier: ShellScript_1
+                                type: ShellScript
+                                spec:
+                                  source:
+                                    type: Inline
+                                    spec:
+                                      script: echo 'hi'
         - stage:
             name: ss
             identifier: ss
