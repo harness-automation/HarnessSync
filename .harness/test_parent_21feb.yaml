@@ -28,3 +28,4 @@ pipeline:
               project: TestAmit
               inputSetReferences:
                 - set321_21feb
+  allowStageExecutions: true
