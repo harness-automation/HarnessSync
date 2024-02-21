@@ -44,4 +44,13 @@ pipeline:
               inputSetReferences:
                 - test_input_set_non_default
             tags: {}
+        - stage:
+            name: s3
+            identifier: s3
+            description: ""
+            type: Pipeline
+            spec:
+              org: default
+              pipeline: testchild_inline
+              project: TestAmit
   allowStageExecutions: true
