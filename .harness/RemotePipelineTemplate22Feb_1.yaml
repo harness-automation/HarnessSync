@@ -1,0 +1,43 @@
+template:
+  name: RemotePipelineTemplate22Feb
+  identifier: RemotePipelineTemplate22Feb
+  versionLabel: "1"
+  type: Pipeline
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  spec:
+    stages:
+      - parallel:
+          - stage:
+              name: s1
+              identifier: s1
+              tags: {}
+              template:
+                templateRef: account.stageTemplateFeb221
+                versionLabel: "1"
+                gitBranch: main-patch
+          - stage:
+              name: s3
+              identifier: s3
+              tags: {}
+              template:
+                templateRef: org.remoteorgRemoteFeb22
+                versionLabel: "1"
+                gitBranch: main-patch
+      - parallel:
+          - stage:
+              name: s2
+              identifier: s2
+              tags: {}
+              template:
+                templateRef: org.remoteorgRemoteFeb22
+                versionLabel: "1"
+                gitBranch: main-patch
+          - stage:
+              name: s4
+              identifier: s4
+              tags: {}
+              template:
+                templateRef: account.stageTemplateFeb221
+                versionLabel: "1"
+                gitBranch: main-patch
