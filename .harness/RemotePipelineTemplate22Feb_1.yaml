@@ -111,3 +111,4 @@ template:
                 - name: secrets
                 - name: webHookNotification
                 - name: pmsCrudV1
+    allowStageExecutions: true
