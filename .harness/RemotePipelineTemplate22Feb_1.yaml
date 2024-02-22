@@ -111,4 +111,6 @@ template:
                 - name: secrets
                 - name: webHookNotification
                 - name: pmsCrudV1
+          when:
+            pipelineStatus: All
     allowStageExecutions: true
