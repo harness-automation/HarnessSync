@@ -11,6 +11,7 @@ connector:
     auth:
       type: UsernamePassword
       spec:
-        username: ccxvcb
+        username: ccxvcbxxv
         passwordRef: account.debagithubworking
     executeOnDelegate: false
+    proxy: false
