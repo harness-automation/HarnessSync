@@ -1,0 +1,16 @@
+connector:
+  name: testdocker
+  identifier: testdocker
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: AmitGitSync
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://www.google.com
+    providerType: DockerHub
+    auth:
+      type: UsernamePassword
+      spec:
+        username: ccxvcb
+        passwordRef: account.debagithubworking
+    executeOnDelegate: false
