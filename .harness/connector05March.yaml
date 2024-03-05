@@ -11,7 +11,7 @@ connector:
     auth:
       type: UsernamePassword
       spec:
-        username: xvcvcvcv
+        username: xvcvcvcvcvcb
         passwordRef: account.AzureSecretncXql
     executeOnDelegate: true
     proxy: false
