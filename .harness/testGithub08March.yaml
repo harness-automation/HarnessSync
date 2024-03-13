@@ -1,7 +1,7 @@
 pipeline:
   name: testGithub08Marchdsdsd
   identifier: testGithub08March
-  projectIdentifier: AmitTest
+  projectIdentifier: AmitTestxzcc
   orgIdentifier: default
   tags: {}
   stages:
