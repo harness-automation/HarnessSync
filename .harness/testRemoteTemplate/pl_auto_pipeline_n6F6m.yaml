@@ -1,0 +1,14 @@
+template:
+  name: pl_auto_pipeline_n6F6m
+  identifier: pl_auto_pipeline_n6F6m
+  versionLabel: v3
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: pl_auto_template_SFiAr
+          identifier: pl_auto_template_SFiAr
+          template:
+            templateRef: account.pl_auto_template_SFiAr
+            versionLabel: v3

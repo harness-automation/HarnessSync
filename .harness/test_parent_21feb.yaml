@@ -1,0 +1,56 @@
+pipeline:
+  name: test parent 21feb
+  identifier: test_parent_21feb
+  projectIdentifier: DoNotDelete_AmitSingh
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  stages:
+    - parallel:
+        - stage:
+            name: s1
+            identifier: s1
+            description: ""
+            type: Pipeline
+            spec:
+              org: Pipelines_NonK8s_Org_NG
+              pipeline: trestChild_21feb
+              project: DoNotDelete_AmitSingh
+              inputs:
+                identifier: trestChild_21feb
+                stages:
+                  - stage:
+                      identifier: s1
+                      type: Custom
+                      spec:
+                        execution:
+                          steps:
+                            - step:
+                                identifier: ShellScript_1
+                                type: ShellScript
+                                spec:
+                                  source:
+                                    type: Inline
+                                    spec:
+                                      script: echo 'hi stage1'
+        - stage:
+            name: ss
+            identifier: ss
+            description: ""
+            type: Pipeline
+            spec:
+              org: default
+              pipeline: testChild_123_21feb
+              project: TestAmit
+              inputSetReferences:
+                - set321_21feb
+            tags: {}
+        - stage:
+            name: s3
+            identifier: s3
+            description: ""
+            type: Pipeline
+            spec:
+              org: default
+              pipeline: testchild_inline
+              project: TestAmit
+  allowStageExecutions: true

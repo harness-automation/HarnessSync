@@ -1,0 +1,17 @@
+template:
+  name: pl_auto_template_c771z
+  identifier: pl_auto_template_c771z
+  versionLabel: v3
+  type: Stage
+  tags: { }
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: pl_auto_template_SbuRS
+              identifier: pl_auto_template_SbuRS
+              template:
+                templateRef: account.pl_auto_template_SbuRS
+                versionLabel: v3
