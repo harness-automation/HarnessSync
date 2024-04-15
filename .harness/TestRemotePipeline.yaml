@@ -8,23 +8,17 @@ pipeline:
     - stage:
         name: s1
         identifier: s1
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: 11s
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: <+input>
         tags: {}
+        template:
+          templateRef: template15Apr
+          versionLabel: "1"
+          gitBranch: main-patch
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      timeout: <+input>
