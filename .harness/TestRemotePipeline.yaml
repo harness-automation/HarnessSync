@@ -21,4 +21,9 @@ pipeline:
                   - step:
                       identifier: ShellScript_1
                       type: ShellScript
+                      spec:
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
                       timeout: <+input>
