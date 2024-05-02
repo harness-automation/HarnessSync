@@ -1,0 +1,7 @@
+environment:
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcRG3snBngct
+  identifier: NGPipeAutoYJ0200Jsex
+  tags: {}
+  name: NGPipeAutoYJ0200Jsex
+  type: PreProduction
