@@ -9,15 +9,3 @@ inputSet:
       - stage:
           identifier: s1
           type: Custom
-          spec:
-            execution:
-              steps:
-                - step:
-                    identifier: ShellScript_1
-                    type: ShellScript
-                    spec:
-                      source:
-                        type: Inline
-                        spec:
-                          script: echo 'hi'
-                    timeout: 10s
