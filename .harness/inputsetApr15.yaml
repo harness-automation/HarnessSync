@@ -1,5 +1,6 @@
 inputSet:
   name: inputsetApr15
+  tags: {}
   identifier: inputsetApr15
   orgIdentifier: Pipelines_NonK8s_Org_NG
   projectIdentifier: AmitTest
@@ -8,4 +9,18 @@ inputSet:
     stages:
       - stage:
           identifier: s1
-          type: Custom
+          template:
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: ShellScript_1
+                        type: ShellScript
+                        spec:
+                          source:
+                            type: Inline
+                            spec:
+                              script: abc
+                        timeout: 10s
