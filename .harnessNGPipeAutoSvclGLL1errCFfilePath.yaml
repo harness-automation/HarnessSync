@@ -1,0 +1,10 @@
+service:
+  name: NGPipeAutoSvclGLL1errCF
+  identifier: NGPipeAutoSvclGLL1errCF
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcOVrCDethe4
+  serviceDefinition:
+    spec:
+      release:
+        name: <+input>
+    type: Kubernetes
