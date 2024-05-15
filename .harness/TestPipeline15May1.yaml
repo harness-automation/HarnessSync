@@ -16,7 +16,7 @@ pipeline:
               - step:
                   type: Wait
                   name: Wait_1
-                  identifier: Wait_1
+                  identifier:Wait_1
                   spec:
                     duration:10s
         tags: {}
