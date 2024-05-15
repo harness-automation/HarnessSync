@@ -1,0 +1,32 @@
+template:
+  name: templatepipeline09May
+  identifier: templatepipeline09May
+  versionLabel: "1"
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: sp1
+                    identifier: sp1
+                    template:
+                      templateRef: templatestep09May
+                      versionLabel: "1"
+                      templateInputs:
+                        type: ShellScript
+                        spec:
+                          source:
+                            type: Inline
+                            spec:
+                              script: <+input>
+          tags: {}
