@@ -1,6 +1,6 @@
 template:
-  name: inlineStep
-  identifier: inlineStep
+  name: inlineStep1
+  identifier: inlineStep123
   versionLabel: "1"
   type: Step
   projectIdentifier: AmitTest
