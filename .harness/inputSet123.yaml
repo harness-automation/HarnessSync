@@ -1,0 +1,22 @@
+inputSet:
+  name: inputSet123
+  identifier: inputSet123
+  orgIdentifier: default
+  projectIdentifier: test_oldgit_sync
+  pipeline:
+    identifier: TestMay23Test
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo 'hi'
