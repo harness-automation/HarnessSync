@@ -1,0 +1,7 @@
+environment:
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvctoMFjRoUAk
+  identifier: NGPipeAutomL6TBtPuiq
+  tags: {}
+  name: NGPipeAutomL6TBtPuiq
+  type: PreProduction
