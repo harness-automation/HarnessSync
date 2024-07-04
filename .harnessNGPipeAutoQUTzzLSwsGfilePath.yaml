@@ -1,7 +1,0 @@
-environment:
-  orgIdentifier: Pipelines_NonK8s_Org_NG
-  projectIdentifier: NGPipeAutoPipelineSvcvBLaRPELOr
-  identifier: NGPipeAutoQUTzzLSwsG
-  tags: {}
-  name: NGPipeAutoQUTzzLSwsG
-  type: PreProduction
