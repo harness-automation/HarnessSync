@@ -1,0 +1,7 @@
+environment:
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcCs7BjU9d3j
+  identifier: NGPipeAutoDK332FTtvx
+  tags: {}
+  name: NGPipeAutoDK332FTtvx
+  type: PreProduction
