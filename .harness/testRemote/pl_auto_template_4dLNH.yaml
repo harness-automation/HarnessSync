@@ -1,0 +1,19 @@
+template:
+  name: pl_auto_template_jIduc
+  identifier: pl_auto_template_jIduc
+  orgIdentifier: DoNotDeleteTriggerOrg
+  type: Step
+  tags: { }
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: [ ]
+      outputVariables: [ ]
+  versionLabel: v3
