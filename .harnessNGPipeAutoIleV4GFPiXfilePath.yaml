@@ -1,7 +1,0 @@
-environment:
-  orgIdentifier: Pipelines_NonK8s_Org_NG
-  projectIdentifier: NGPipeAutoPipelineSvcBxpD7XAGr4
-  identifier: NGPipeAutoIleV4GFPiX
-  tags: {}
-  name: NGPipeAutoIleV4GFPiX
-  type: PreProduction
