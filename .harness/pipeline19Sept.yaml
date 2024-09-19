@@ -22,6 +22,10 @@ pipeline:
                             templateInputs:
                               type: ShellScript
                               spec:
+                                source:
+                                  type: Inline
+                                  spec:
+                                    script: <+input>
                                 outputVariables:
                                   - name: var1
                                     type: String
@@ -29,10 +33,10 @@ pipeline:
                 variables:
                   - name: var2
                     type: String
-                    value: "<+input>.allowedValues(v1,v2,v3)"
+                    value: <+input>.allowedValues(v1,v2,v3)
                   - name: var3
                     type: String
-                    value: "<+input>.selectOneFrom(v3,v4,v5)"
+                    value: <+input>.selectOneFrom(v3,v4,v5)
         - stage:
             identifier: s3
             type: Deployment
@@ -48,9 +52,9 @@ pipeline:
             variables:
               - name: var4
                 type: String
-                value: "<+input>.allowedValues(v6,v7)"
+                value: <+input>.allowedValues(v6,v7)
               - name: var5
                 type: String
-                value: "<+input>.selectOneFrom(v8,v9)"
+                value: <+input>.selectOneFrom(v8,v9)
   projectIdentifier: AmitTest
   orgIdentifier: Pipelines_NonK8s_Org_NG
