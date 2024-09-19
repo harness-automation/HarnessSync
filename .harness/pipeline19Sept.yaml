@@ -1,0 +1,56 @@
+pipeline:
+  name: pipeline19Sept
+  identifier: pipeline19Sept
+  tags: {}
+  template:
+    templateRef: pipelineTemplate19Sept
+    versionLabel: "1"
+    gitBranch: main
+    templateInputs:
+      stages:
+        - stage:
+            identifier: s2
+            template:
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: step1
+                          template:
+                            templateInputs:
+                              type: ShellScript
+                              spec:
+                                outputVariables:
+                                  - name: var1
+                                    type: String
+                                    value: <+input>
+                variables:
+                  - name: var2
+                    type: String
+                    value: <+input>.allowedValues(v1,v2,v3)
+                  - name: var3
+                    type: String
+                    value: <+input>.selectOneFrom(v3,v4,v5)
+        - stage:
+            identifier: s3
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+            variables:
+              - name: var4
+                type: String
+                value: <+input>.allowedValues(v6,v7)
+              - name: var5
+                type: String
+                value: <+input>.selectOneFrom(v8,v9)
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
