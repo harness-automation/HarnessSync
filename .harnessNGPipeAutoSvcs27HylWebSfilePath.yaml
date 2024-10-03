@@ -1,0 +1,10 @@
+service:
+  name: NGPipeAutoSvcs27HylWebS
+  identifier: NGPipeAutoSvcs27HylWebS
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcQwpSHCUtHD
+  serviceDefinition:
+    spec:
+      release:
+        name: <+input>
+    type: Kubernetes
