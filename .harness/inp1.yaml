@@ -1,0 +1,26 @@
+inputSet:
+  name: inp1
+  identifier: inp1
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: secretCheck
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo 'hi'
+    variables:
+      - name: var1
+        type: String
+        value: <+secrets.getValue(adi_github_pat)>
