@@ -1,7 +1,0 @@
-environment:
-  orgIdentifier: Pipelines_NonK8s_Org_NG
-  projectIdentifier: NGPipeAutoPipelineSvcMAXCKTVoAa
-  identifier: NGPipeAutodvV4ro5PRA
-  tags: {}
-  name: NGPipeAutodvV4ro5PRA
-  type: PreProduction
