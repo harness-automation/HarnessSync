@@ -1,7 +1,0 @@
-environment:
-  orgIdentifier: Pipelines_NonK8s_Org_NG
-  projectIdentifier: NGPipeAutoPipelineSvcFC2JB72iB5
-  identifier: NGPipeAutospThAWnX86
-  tags: {}
-  name: NGPipeAutospThAWnX86
-  type: PreProduction
