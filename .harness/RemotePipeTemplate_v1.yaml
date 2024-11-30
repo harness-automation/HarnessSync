@@ -1,0 +1,25 @@
+template:
+  name: RemotePipeTemplate
+  type: Pipeline
+  orgIdentifier: default
+  spec:
+    stages:
+      - stage:
+          name: acxc
+          identifier: acxc
+          template:
+            templateRef: org.nonDefaultStage
+            versionLabel: v1
+            templateInputs:
+              type: Approval
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: A21
+                        type: HarnessApproval
+                        spec:
+                          approvers:
+                            userGroups: <+input>
+  identifier: RemotePipeTemplate
+  versionLabel: v1
