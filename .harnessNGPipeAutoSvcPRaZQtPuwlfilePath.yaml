@@ -1,0 +1,10 @@
+service:
+  name: NGPipeAutoSvcPRaZQtPuwl
+  identifier: NGPipeAutoSvcPRaZQtPuwl
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvc4GsOeH8Uty
+  serviceDefinition:
+    spec:
+      release:
+        name: <+input>
+    type: Kubernetes
