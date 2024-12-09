@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: NGPipeAutoJGiSEM4Elp
+  identifier: NGPipeAutoJGiSEM4Elp
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcRdUuGrx9Tt
+  environmentRef: NGPipeAutoJCOYwcK0Mt
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: org.KubernetesConnectorForAutomationTest
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: true
