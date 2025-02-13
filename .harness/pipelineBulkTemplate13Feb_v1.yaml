@@ -119,6 +119,14 @@ template:
                                       type: Inline
                                       spec:
                                         script: <+input>
+                          - step:
+                              identifier: ShellScript_1
+                              type: ShellScript
+                              spec:
+                                source:
+                                  type: Inline
+                                  spec:
+                                    script: <+input>
                         variables:
                           - name: var1
                             type: String
