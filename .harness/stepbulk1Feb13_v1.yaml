@@ -7,7 +7,6 @@ template:
   orgIdentifier: Pipelines_NonK8s_Org_NG
   tags: {}
   spec:
-    timeout: <+input>
     type: ShellScript
     spec:
       shell: Bash
@@ -19,3 +18,5 @@ template:
           script: <+input>
       environmentVariables: []
       outputVariables: []
+    timeout: <+input>
+    when: <+input>
