@@ -68,13 +68,6 @@ template:
           template:
             templateRef: bulkStep13Feb
             versionLabel: v2
-            templateInputs:
-              type: ShellScript
-              spec:
-                source:
-                  type: Inline
-                  spec:
-                    script: <+input>
     variables:
       - name: var1
         type: String
