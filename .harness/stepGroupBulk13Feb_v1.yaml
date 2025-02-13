@@ -64,6 +64,19 @@ template:
             environmentVariables: []
             outputVariables: []
           timeout: 10m
+      - step:
+          name: step3
+          identifier: step3
+          template:
+            templateRef: bulkStep13Feb
+            versionLabel: v2
+            templateInputs:
+              type: ShellScript
+              spec:
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
     variables:
       - name: var1
         type: String
