@@ -1,0 +1,22 @@
+inputSet:
+  name: input24Feb
+  identifier: input24Feb
+  orgIdentifier: Simlified_Git_sync
+  projectIdentifier: SimplifiedGitSync_Do_Not_Delete
+  pipeline:
+    identifier: pl_auto_pipeline_YvRCI
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: exit 1
