@@ -7,4 +7,17 @@ service:
     spec:
       release:
         name: release-<+INFRA_KEY_SHORT_ID>
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - name: artifact temp
+              identifier: artifact_temp
+              template:
+                templateRef: bugbash_artifact_template
+                versionLabel: v1
+                templateInputs:
+                  type: GoogleArtifactRegistry
+                  spec:
+                    version: <+input>
     type: Kubernetes
