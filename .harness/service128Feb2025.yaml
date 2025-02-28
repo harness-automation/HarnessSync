@@ -1,0 +1,5 @@
+service:
+  name: service-1-28Feb2025
+  identifier: service128Feb2025
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: AmitTest
