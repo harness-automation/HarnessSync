@@ -1,0 +1,116 @@
+template:
+  name: RemotePipelineTemplate22Feb
+  identifier: RemotePipelineTemplate22Feb
+  versionLabel: "1"
+  type: Pipeline
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  spec:
+    stages:
+      - parallel:
+          - stage:
+              name: s1
+              identifier: s1
+              tags: {}
+              template:
+                templateRef: account.stageTemplateFeb221
+                versionLabel: "1"
+                gitBranch: main-patch
+          - stage:
+              name: s3
+              identifier: s3
+              tags: {}
+              template:
+                templateRef: org.remoteorgRemoteFeb22
+                versionLabel: "1"
+                gitBranch: main-patch
+      - parallel:
+          - stage:
+              name: s2
+              identifier: s2
+              tags: {}
+              template:
+                templateRef: org.remoteorgRemoteFeb22
+                versionLabel: "1"
+                gitBranch: main-patch
+          - stage:
+              name: s4
+              identifier: s4
+              tags: {}
+              template:
+                templateRef: account.stageTemplateFeb221
+                versionLabel: "1"
+                gitBranch: main-patch
+      - stage:
+          name: s5
+          identifier: s5
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: |-
+                            echo 'hi'
+                            <+matrix.groups.name>
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
+          strategy:
+            matrix:
+              groups:
+                - name: inputSet
+                - name: slackNotification
+                - name: failureStrategy
+                - name: http
+                - name: preflightCheck
+                - name: barriers
+                - name: filters
+                - name: expressions
+                - name: rollback
+                - name: stages
+                - name: variables
+                - name: whenCondition
+                - name: interrupt
+                - name: retry
+                - name: pipelineGovernance
+                - name: ModuleInfo
+                - name: TsInfo
+                - name: customStage
+                - name: clone
+                - name: getMetadata
+                - name: queueStep
+                - name: waitStep
+                - name: pipelineChaining
+                - name: pmsError
+                - name: emailNotification
+                - name: runtimeExecutionInput
+                - name: strategy
+                - name: strategyInterrupts
+                - name: strategyWhenCondition
+                - name: pipelineEnforcementGovernance
+                - name: strategyAsRuntimeInput
+                - name: pipelineRollback
+                - name: delegateSelectorExpressions
+                - name: strategyErrorValidation
+                - name: postProdRollback
+                - name: logKeySimplification
+                - name: PipelineEnvInfraExpression
+                - name: artifact_filters
+                - name: timeframe_filters
+                - name: secrets
+                - name: webHookNotification
+                - name: pmsCrudV1
+          when:
+            pipelineStatus: All
+    allowStageExecutions: true
