@@ -3,3 +3,8 @@ service:
   identifier: service28FebRemote
   orgIdentifier: Pipelines_NonK8s_Org_NG
   projectIdentifier: AmitTest
+  serviceDefinition:
+    spec:
+      release:
+        name: release-<+INFRA_KEY_SHORT_ID>
+    type: Kubernetes
