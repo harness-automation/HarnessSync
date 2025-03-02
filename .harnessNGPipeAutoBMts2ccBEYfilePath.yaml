@@ -1,0 +1,7 @@
+environment:
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcxo2GUsFonx
+  identifier: NGPipeAutoBMts2ccBEY
+  tags: {}
+  name: NGPipeAutoBMts2ccBEY
+  type: PreProduction
