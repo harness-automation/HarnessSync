@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: NGPipeAutorPeTwAQ2MQ
+  identifier: NGPipeAutorPeTwAQ2MQ
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvctPwTbznPOX
+  environmentRef: NGPipeAutowxdcnd0L46
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: org.KubernetesConnectorForAutomationTest
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: true
