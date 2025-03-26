@@ -1,0 +1,10 @@
+service:
+  name: NGPipeAutoSvcRjtCGPKauf
+  identifier: NGPipeAutoSvcRjtCGPKauf
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcA1GPC4P70I
+  serviceDefinition:
+    spec:
+      release:
+        name: <+input>
+    type: Kubernetes
