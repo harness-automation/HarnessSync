@@ -1,0 +1,25 @@
+template:
+  name: pl_auto_template_Q3IWb
+  identifier: pl_auto_template_Q3IWb
+  versionLabel: v3
+  type: Stage
+  tags: { }
+  spec:
+    type: Custom
+    spec:
+       execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              timeout: 10m
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
+                environmentVariables: [ ]
+                outputVariables: [ ]
