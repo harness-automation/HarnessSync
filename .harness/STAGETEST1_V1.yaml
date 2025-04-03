@@ -1,0 +1,65 @@
+template:
+  name: STAGETEST1
+  identifier: STAGETEST1
+  versionLabel: V1
+  type: Stage
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      environment:
+        environmentRef: <+input>
+        deployToAll: false
+        environmentInputs: <+input>
+        serviceOverrideInputs: <+input>
+        infrastructureDefinitions: <+input>
+      service:
+        serviceRef: <+input>
+        serviceInputs: <+input>
+      execution:
+        steps:
+          - step:
+              type: K8sRollingDeploy
+              name: K8sRollingDeploy_1
+              identifier: K8sRollingDeploy_1
+              spec:
+                skipDryRun: false
+                pruningEnabled: false
+              timeout: 10m
+          - step:
+              type: ShellScript
+              name: validate-inputs
+              identifier: validateinputs
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: |
+                      # Validate input variables
+
+                      if [ -z "$MANIFEST_ID" ]; then
+                        echo "Error: MANIFEST_ID variable is not set."
+                        exit 1
+                      fi
+                environmentVariables:
+                  - name: MANIFEST_ID
+                    type: String
+                    value: <+artifact.tag>
+                outputVariables: []
+              timeout: 10m
+              failureStrategies:
+                - onFailure:
+                    errors:
+                      - AllErrors
+                    action:
+                      type: Abort
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
