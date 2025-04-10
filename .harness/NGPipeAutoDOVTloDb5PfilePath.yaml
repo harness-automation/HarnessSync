@@ -1,7 +1,0 @@
-environment:
-  orgIdentifier: Pipelines_NonK8s_Org_NG
-  projectIdentifier: NGPipeAutoPipelineSvcmYYReZF2Tq
-  identifier: NGPipeAutoDOVTloDb5P
-  tags: {}
-  name: NGPipeAutoDOVTloDb5P
-  type: PreProduction
