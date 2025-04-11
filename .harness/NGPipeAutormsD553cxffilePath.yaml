@@ -1,0 +1,7 @@
+environment:
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvckA3Cpg51x6
+  identifier: NGPipeAutormsD553cxf
+  tags: {}
+  name: NGPipeAutormsD553cxf
+  type: PreProduction
