@@ -1,0 +1,19 @@
+template:
+  name: pl_auto_template_QnRvp
+  identifier: pl_auto_template_QnRvp
+  orgIdentifier: DoNotDeleteTriggerOrg
+  type: Step
+  tags: { }
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: [ ]
+      outputVariables: [ ]
+  versionLabel: v3
