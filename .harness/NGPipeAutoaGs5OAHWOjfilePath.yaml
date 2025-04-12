@@ -1,7 +1,0 @@
-environment:
-  orgIdentifier: Pipelines_NonK8s_Org_NG
-  projectIdentifier: NGPipeAutoPipelineSvcd60gdbN8tx
-  identifier: NGPipeAutoaGs5OAHWOj
-  tags: {}
-  name: NGPipeAutoaGs5OAHWOj
-  type: PreProduction
