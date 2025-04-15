@@ -1,0 +1,10 @@
+service:
+  name: NGPipeAutoSvcETb136zMbB
+  identifier: NGPipeAutoSvcETb136zMbB
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvc25dgEGemFD
+  serviceDefinition:
+    spec:
+      release:
+        name: <+input>
+    type: Kubernetes
