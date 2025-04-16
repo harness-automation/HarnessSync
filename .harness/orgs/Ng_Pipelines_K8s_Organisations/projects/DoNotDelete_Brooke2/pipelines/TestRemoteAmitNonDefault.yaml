@@ -28,3 +28,27 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: s1
+        identifier: s1
+        tags: {}
+        template:
+          templateRef: stagetemp
+          versionLabel: v1
+          gitBranch: main
+          templateInputs:
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceRef: <+pipeline.variables.dummyVar>
+  variables:
+    - name: dummyVar
+      type: String
+      description: ""
+      required: false
+      value: <+input>
