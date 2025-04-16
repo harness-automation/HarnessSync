@@ -1,6 +1,6 @@
 template:
   name: stepTestAmit
-  identifier: stepTestAmit
+  identifier: step-TestAmit
   versionLabel: v1
   type: Step
   projectIdentifier: AmitTest
