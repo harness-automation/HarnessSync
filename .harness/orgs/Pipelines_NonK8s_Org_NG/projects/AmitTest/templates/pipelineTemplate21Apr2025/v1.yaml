@@ -15,6 +15,7 @@ template:
           template:
             templateRef: stageTemplate21Apr
             versionLabel: v1
+            gitBranch: Apr21-2025
             templateInputs:
               type: Custom
               spec:
