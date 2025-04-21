@@ -1,9 +1,0 @@
-pipeline:
-  name: pipelineTemplate21AprPipeline
-  identifier: pipelineTemplate21AprPipeline
-  tags: {}
-  template:
-    templateRef: pipelineTemplate21Apr2025
-    versionLabel: v1
-  projectIdentifier: AmitTest
-  orgIdentifier: Pipelines_NonK8s_Org_NG
