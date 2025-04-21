@@ -16,18 +16,3 @@ template:
             templateRef: stageTemplate21Apr
             versionLabel: v1
             gitBranch: Apr21-2025
-            templateInputs:
-              type: Custom
-              spec:
-                execution:
-                  steps:
-                    - step:
-                        identifier: step1
-                        template:
-                          templateInputs:
-                            type: ShellScript
-                            spec:
-                              source:
-                                type: Inline
-                                spec:
-                                  script: <+input>
