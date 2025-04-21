@@ -5,25 +5,5 @@ pipeline:
   template:
     templateRef: pipelineTemplate21Apr2025
     versionLabel: v1
-    templateInputs:
-      stages:
-        - stage:
-            identifier: s1
-            template:
-              templateInputs:
-                type: Custom
-                spec:
-                  execution:
-                    steps:
-                      - step:
-                          identifier: step1
-                          template:
-                            templateInputs:
-                              type: ShellScript
-                              spec:
-                                source:
-                                  type: Inline
-                                  spec:
-                                    script: <+input>
   projectIdentifier: AmitTest
   orgIdentifier: Pipelines_NonK8s_Org_NG
