@@ -8,22 +8,23 @@ pipeline:
     - stage:
         name: s1
         identifier: s1
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  name: step1
-                  identifier: step1
-                  template:
-                    templateRef: StepIssue21Apr2025
-                    versionLabel: v1
-                    templateInputs:
-                      type: ShellScript
-                      spec:
-                        source:
-                          type: Inline
-                          spec:
-                            script: <+input>
         tags: {}
+        template:
+          templateRef: stageTemplate21Apr
+          versionLabel: v1
+          gitBranch: main
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: step1
+                      template:
+                        templateInputs:
+                          type: ShellScript
+                          spec:
+                            source:
+                              type: Inline
+                              spec:
+                                script: <+input>
