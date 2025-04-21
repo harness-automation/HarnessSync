@@ -14,6 +14,12 @@ template:
               template:
                 templateRef: StepIssue21Apr2025
                 versionLabel: v1
-                gitBranch: Apr21-2025
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
   identifier: stageTemplate21Apr
   versionLabel: v1
