@@ -1,0 +1,19 @@
+template:
+  name: pl_auto_template_IiUIY
+  identifier: pl_auto_template_IiUIY
+  orgIdentifier: DoNotDeleteTriggerOrg
+  type: Step
+  tags: { }
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: [ ]
+      outputVariables: [ ]
+  versionLabel: v3
