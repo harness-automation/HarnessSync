@@ -1,7 +1,0 @@
-environment:
-  orgIdentifier: Pipelines_NonK8s_Org_NG
-  projectIdentifier: NGPipeAutoPipelineSvcjEDgOcsIKM
-  identifier: NGPipeAuto4GG3v31zhD
-  tags: {}
-  name: NGPipeAuto4GG3v31zhD
-  type: PreProduction
