@@ -1,0 +1,7 @@
+environment:
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoPipelineSvcCSag623Qqe
+  identifier: NGPipeAutoUAPsPE49zR
+  tags: {}
+  name: NGPipeAutoUAPsPE49zR
+  type: PreProduction
